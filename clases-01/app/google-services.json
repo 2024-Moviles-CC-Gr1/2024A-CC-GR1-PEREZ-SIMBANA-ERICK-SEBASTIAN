@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "671174085117",
+    "project_id": "esps-2024a-cc-gr1",
+    "storage_bucket": "esps-2024a-cc-gr1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:671174085117:android:6f0ab140e22dc237d5b194",
+        "android_client_info": {
+          "package_name": "com.example.a2024accg1esps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPNQr1yS8oMTt6Xecs3Nkt0_D-Emn3K10"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
