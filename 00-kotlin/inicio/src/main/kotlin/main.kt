@@ -56,6 +56,60 @@ fun main() {
     println(suma.pi)
     println(suma.elevarAlCuadrado(2))
     print(suma.historialSumas)
+
+    val arregloEstatico: Array<Int> = arrayOf<Int>(1,2,3,4,5)
+    println(arregloEstatico)
+
+    val arregloDinamico: ArrayList<Int> = arrayListOf<Int>(1,2,3,4,5,6,7,8,9)
+    println(arregloDinamico)
+    arregloDinamico.add(20)
+    arregloDinamico.add(24)
+    println(arregloDinamico)
+
+    val respuestaForEach: Unit = arregloDinamico
+        .forEach{ valorActual: Int -> println("Valor Actual: ${valorActual}") }
+
+    arregloDinamico.forEach{ println("Valor Actual: ${it}") }
+
+    val respuestaMap: List<Double> = arregloDinamico
+        .map{ valorActual: Int ->
+            return@map valorActual.toDouble() + 100.00
+        }
+    println(respuestaMap)
+
+    val respuestaMapDos = arregloDinamico.map{it + 15}
+    println(respuestaMapDos)
+
+    val respuestaFilter: List<Int> = arregloDinamico.filter{
+        valorActual:Int ->
+        val mayoresaCinco: Boolean = valorActual > 5
+        return@filter mayoresaCinco
+    }
+
+    val respuestaFilterDos = arregloDinamico.filter{ it <= 5}
+    println(respuestaFilter)
+    println(respuestaFilterDos)
+
+    val respuestaAn: Boolean = arregloDinamico
+        .any{valorActual:Int ->
+            return@any (valorActual > 5)
+        }
+
+    println(respuestaAn)
+
+    val respuestaAll = arregloDinamico
+        .all{it > 5}
+
+    println(respuestaAll)
+
+    val respuestaReduce: Int = arregloDinamico
+        .reduce{ acc: Int, i: Int ->
+            return@reduce (acc + i)
+        }
+
+    println(respuestaReduce)
+
+
 }
 
 fun imprimirNombre(nombre:String): Unit{
