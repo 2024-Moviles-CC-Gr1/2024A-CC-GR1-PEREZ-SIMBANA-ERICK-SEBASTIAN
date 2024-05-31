@@ -1,0 +1,7 @@
+ID: 1
+Fecha: 2005-10-10
+Cliente: Sebastian
+Descuento: 1.5
+Pagada: true
+Detalles:
+Producto: portaminas, Cantidad: 8, Precio: 5.0, Impuesto: 12.0, Enviado: true
