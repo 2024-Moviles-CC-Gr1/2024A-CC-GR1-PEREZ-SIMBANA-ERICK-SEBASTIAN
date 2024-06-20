@@ -1,5 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">2024ACCG1ESPS</string>
-    <string name="saludo">Hello, its me</string>
-
+    <string name="saludo">Hello World</string>
+    <string-array name="string_array_opciones">
+        <string>Lunes</string>
+        <string>Martes</string>
+        <string>Miercoles</string>
+    </string-array>
 </resources>
