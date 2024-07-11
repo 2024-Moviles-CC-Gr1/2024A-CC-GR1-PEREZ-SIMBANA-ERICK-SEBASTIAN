@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="72dp"
-        android:text="Button"
+        android:text="Añadir"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/lv_list_view"
         app:layout_constraintHorizontal_bias="0.502"

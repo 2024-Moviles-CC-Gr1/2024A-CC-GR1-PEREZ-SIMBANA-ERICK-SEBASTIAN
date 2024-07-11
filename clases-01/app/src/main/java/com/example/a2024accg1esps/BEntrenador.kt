@@ -3,7 +3,7 @@ package com.example.a2024accg1esps
 import android.os.Parcel
 import android.os.Parcelable
 
-class BEntrenador (
+class BEntrenador(
     var id:Int,
     var nombre:String,
     var descripcion:String?
@@ -13,8 +13,8 @@ class BEntrenador (
         parcel.readString()!!,
         parcel.readString()
     ) {
-
     }
+
     override fun toString(): String {
         return "$nombre ${descripcion}"
     }
@@ -38,4 +38,5 @@ class BEntrenador (
             return arrayOfNulls(size)
         }
     }
+
 }

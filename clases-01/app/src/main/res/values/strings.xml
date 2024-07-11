@@ -3,8 +3,8 @@
     <string name="app_name">2024ACCG1ESPS</string>
     <string name="saludo">Hello World</string>
     <string-array name="string_array_opciones">
-        <string>Lunes</string>
-        <string>Martes</string>
-        <string>Miercoles</string>
+        <item>Lunes</item>
+        <item>Martes</item>
+        <item>Miercoles</item>
     </string-array>
 </resources>

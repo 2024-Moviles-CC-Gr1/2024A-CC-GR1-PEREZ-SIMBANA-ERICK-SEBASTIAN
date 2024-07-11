@@ -29,6 +29,9 @@ class MainActivity : AppCompatActivity() {
                     // logica negocio
                     val data = result.data;
                     mostrarSnackbar(
+                        "${result.data}"
+                    )
+                    mostrarSnackbar(
                         "${data?.getStringExtra("nombreMofificado")}"
                     )
                 }
@@ -91,10 +94,13 @@ class MainActivity : AppCompatActivity() {
                     this,
                     CIntentExplicitoParametros::class.java
                 )
-                intentExplicito.putExtra("nombre", "Jenny")
-                intentExplicito.putExtra("apellido", "Mi amor")
+                intentExplicito.putExtra("nombre", "Adrian")
+                intentExplicito.putExtra("apellido", "Eguez")
                 intentExplicito.putExtra("edad", 34)
-                intentExplicito.putExtra("entrenador", BEntrenador(10,"Jenny", "Mi amor"))
+                intentExplicito.putExtra(
+                    "entrenador",
+                    BEntrenador( 10, "Adrian", "Eguez" )
+                )
                 callbackContenidoIntentExplicito.launch(intentExplicito)
             }
     }
