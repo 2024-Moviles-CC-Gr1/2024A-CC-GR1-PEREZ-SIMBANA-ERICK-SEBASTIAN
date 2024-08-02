@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "712849688489",
+    "project_id": "esps-2024a-deber02",
+    "storage_bucket": "esps-2024a-deber02.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:712849688489:android:afe01c31dd00ed857c66b8",
+        "android_client_info": {
+          "package_name": "com.example.a2024accgr1esps"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_9pYlUuL0C_86CjaZ7mgDU6ZlUvyKCAo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

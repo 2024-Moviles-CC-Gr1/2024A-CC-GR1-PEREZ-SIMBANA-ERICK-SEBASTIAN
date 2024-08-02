@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_sqlite_detalle_factura"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/input_id_detalle_factura"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="16dp"
+        android:hint="ID Detalle Factura"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/input_cantidad"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Cantidad"
+        android:layout_below="@id/input_id_detalle_factura"
+        android:layout_marginTop="8dp"
+        android:inputType="number" />
+
+    <EditText
+        android:id="@+id/input_producto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Producto"
+        android:layout_below="@id/input_cantidad"
+        android:layout_marginTop="8dp" />
+
+    <EditText
+        android:id="@+id/input_precio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Precio"
+        android:layout_below="@id/input_producto"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/input_impuesto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Impuesto"
+        android:layout_below="@id/input_precio"
+        android:layout_marginTop="8dp"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/input_enviado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enviado (Sí/No)"
+        android:layout_below="@id/input_impuesto"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_buscar_bdd_detalle_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/input_enviado"
+        android:layout_alignEnd="@+id/input_enviado"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="239dp"
+        android:text="Buscar Detalle" />
+
+    <Button
+        android:id="@+id/btn_crear_bdd_detalle_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crear Detalle"
+        android:layout_below="@id/btn_buscar_bdd_detalle_factura"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_actualizar_bdd_detalle_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Detalle"
+        android:layout_below="@id/btn_crear_bdd_detalle_factura"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/btn_eliminar_bdd_detalle_factura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Detalle"
+        android:layout_below="@id/btn_actualizar_bdd_detalle_factura"
+        android:layout_marginTop="8dp" />
+</RelativeLayout>
