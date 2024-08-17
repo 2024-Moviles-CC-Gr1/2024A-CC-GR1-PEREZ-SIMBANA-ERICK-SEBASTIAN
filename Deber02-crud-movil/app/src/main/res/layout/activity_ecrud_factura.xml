@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/cl_sqlite_factura"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,73 +9,101 @@
 
     <EditText
         android:id="@+id/input_id_factura"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="ID Factura"
-        android:inputType="number" />
+        android:hint="ID de la Factura"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/input_cliente"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Cliente"
-        android:layout_below="@id/input_id_factura"
-        android:layout_marginTop="8dp" />
+        android:hint="Nombre del Cliente"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/input_id_factura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/input_fecha"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Fecha"
-        android:layout_below="@id/input_cliente"
-        android:layout_marginTop="8dp" />
+        android:hint="Fecha de Factura"
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/input_cliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/input_descuento"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Descuento"
-        android:layout_below="@id/input_fecha"
+        android:minHeight="48dp"
+        android:padding="12dp"
         android:layout_marginTop="8dp"
-        android:inputType="numberDecimal" />
+        app:layout_constraintTop_toBottomOf="@id/input_fecha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <EditText
         android:id="@+id/input_pagada"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="Pagada (Sí/No)"
-        android:layout_below="@id/input_descuento"
-        android:layout_marginTop="8dp" />
+        android:minHeight="48dp"
+        android:padding="12dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/input_descuento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btn_buscar_bdd_factura"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Buscar Factura"
-        android:layout_below="@id/input_pagada"
-        android:layout_marginTop="16dp" />
+        android:text="Buscar en BDD"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/input_pagada"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btn_crear_bdd_factura"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Crear Factura"
-        android:layout_below="@id/btn_buscar_bdd_factura"
-        android:layout_marginTop="8dp" />
+        android:text="Crear en BDD"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_buscar_bdd_factura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btn_actualizar_bdd_factura"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Actualizar Factura"
-        android:layout_below="@id/btn_crear_bdd_factura"
-        android:layout_marginTop="8dp" />
+        android:text="Actualizar en BDD"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_crear_bdd_factura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
     <Button
         android:id="@+id/btn_eliminar_bdd_factura"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Eliminar Factura"
-        android:layout_below="@id/btn_actualizar_bdd_factura"
-        android:layout_marginTop="8dp" />
-</RelativeLayout>
+        android:text="Eliminar en BDD"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_actualizar_bdd_factura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

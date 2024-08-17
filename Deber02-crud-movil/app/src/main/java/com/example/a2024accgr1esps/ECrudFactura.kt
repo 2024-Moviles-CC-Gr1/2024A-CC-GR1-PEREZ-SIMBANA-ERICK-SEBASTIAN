@@ -1,3 +1,4 @@
+
 package com.example.a2024accgr1esps
 
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import android.widget.EditText
 import com.google.android.material.snackbar.Snackbar
 
 class ECrudFactura : AppCompatActivity() {
+
     fun mostrarSnackbar(texto: String) {
         val snack = Snackbar.make(
             findViewById(R.id.cl_sqlite_factura),
@@ -41,7 +43,6 @@ class ECrudFactura : AppCompatActivity() {
                 fecha.setText(factura.fecha)
                 descuento.setText(factura.descuento.toString())
                 pagada.setText(if (factura.pagada) "Sí" else "No")
-                mostrarSnackbar("Factura encontrada")
             }
         }
 

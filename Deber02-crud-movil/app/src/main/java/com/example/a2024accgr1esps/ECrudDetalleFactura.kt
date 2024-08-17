@@ -1,3 +1,4 @@
+
 package com.example.a2024accgr1esps
 
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +8,7 @@ import android.widget.EditText
 import com.google.android.material.snackbar.Snackbar
 
 class ECrudDetalleFactura : AppCompatActivity() {
+
     fun mostrarSnackbar(texto: String) {
         val snack = Snackbar.make(
             findViewById(R.id.cl_sqlite_detalle_factura),
@@ -28,6 +30,7 @@ class ECrudDetalleFactura : AppCompatActivity() {
             val precio = findViewById<EditText>(R.id.input_precio)
             val impuesto = findViewById<EditText>(R.id.input_impuesto)
             val enviado = findViewById<EditText>(R.id.input_enviado)
+
             val detalleFactura = EBaseDeDatos.tablaDetalleFactura!!.consultarDetalleFacturaPorID(id.text.toString().toInt())
             if (detalleFactura == null) {
                 mostrarSnackbar("Detalle de factura no encontrado")
@@ -43,8 +46,7 @@ class ECrudDetalleFactura : AppCompatActivity() {
                 producto.setText(detalleFactura.producto)
                 precio.setText(detalleFactura.precio.toString())
                 impuesto.setText(detalleFactura.impuesto.toString())
-                enviado.setText(if (detalleFactura.enviado) "Sí" else "No")
-                mostrarSnackbar("Detalle de factura encontrado")
+                enviado.setText(detalleFactura.enviado.toString())
             }
         }
 
@@ -55,12 +57,13 @@ class ECrudDetalleFactura : AppCompatActivity() {
             val precio = findViewById<EditText>(R.id.input_precio)
             val impuesto = findViewById<EditText>(R.id.input_impuesto)
             val enviado = findViewById<EditText>(R.id.input_enviado)
+
             val respuesta = EBaseDeDatos.tablaDetalleFactura!!.createDetalleFactura(
                 cantidad.text.toString().toInt(),
                 producto.text.toString(),
                 precio.text.toString().toDouble(),
                 impuesto.text.toString().toDouble(),
-                enviado.text.toString().equals("Sí", true)
+                enviado.text.toString().toBoolean()
             )
             if (respuesta) mostrarSnackbar("Detalle de factura creado")
         }
@@ -73,13 +76,14 @@ class ECrudDetalleFactura : AppCompatActivity() {
             val precio = findViewById<EditText>(R.id.input_precio)
             val impuesto = findViewById<EditText>(R.id.input_impuesto)
             val enviado = findViewById<EditText>(R.id.input_enviado)
+
             val respuesta = EBaseDeDatos.tablaDetalleFactura!!.actualizarDetalleFactura(
                 id.text.toString().toInt(),
                 cantidad.text.toString().toInt(),
                 producto.text.toString(),
                 precio.text.toString().toDouble(),
                 impuesto.text.toString().toDouble(),
-                enviado.text.toString().equals("Sí", true)
+                enviado.text.toString().toBoolean()
             )
             if (respuesta) mostrarSnackbar("Detalle de factura actualizado")
         }

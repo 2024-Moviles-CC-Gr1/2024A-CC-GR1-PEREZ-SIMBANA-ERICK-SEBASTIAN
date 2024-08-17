@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">2024ACCGR1ESPS</string>
     <string name="title_activity_ecrud_factura">activity_ecrud_factura</string>
+    <string name="hint_id_detalle_factura">ID del Detalle de Factura</string>
+    <string name="hint_cantidad">Cantidad</string>
+    <string name="btn_buscar">Buscar en BDD</string>
 </resources>
