@@ -4,4 +4,7 @@
     <string name="hint_id_detalle_factura">ID del Detalle de Factura</string>
     <string name="hint_cantidad">Cantidad</string>
     <string name="btn_buscar">Buscar en BDD</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_ggoogle_maps_inicio">GGoogleMapsInicio</string>
+    <string name="title_activity_ggoogle_maps">GGoogleMapsActivity</string>
 </resources>

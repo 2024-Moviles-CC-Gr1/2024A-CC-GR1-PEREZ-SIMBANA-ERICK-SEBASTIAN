@@ -1,6 +1,7 @@
 
 package com.example.a2024accgr1esps
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -83,6 +84,12 @@ class ECrudFactura : AppCompatActivity() {
             val id = findViewById<EditText>(R.id.input_id_factura)
             val respuesta = EBaseDeDatos.tablaFactura!!.eliminarFactura(id.text.toString().toInt())
             if (respuesta) mostrarSnackbar("Factura eliminada")
+        }
+
+        val btnOpenMap = findViewById<Button>(R.id.btnOpenMap)
+        btnOpenMap.setOnClickListener {
+            val intent = Intent(this, GGoogleMapsInicio::class.java)
+            startActivity(intent)
         }
     }
 }
